@@ -1,7 +1,3 @@
-// Burger of the day
-// what characters a in today
-// next door store
-
 document.querySelector('button').addEventListener('click', openRestaurant);
 
 openRestaurant();
@@ -14,7 +10,7 @@ function openRestaurant() {
     getCustomer(url, 'character-one');
     getCustomer(url, 'character-two');
     getCustomer(url, 'character-three', 553);
-    // getStoreNextDoor(url);
+    getStoreNextDoor(url);
 }
 
 function getBurgerOfTheDat(url) {
@@ -33,9 +29,6 @@ function getBurgerOfTheDat(url) {
             }
             document.querySelector('.burger').innerText = data[burgerId].name;
             document.querySelector('.price').innerText = data[burgerId].price;
-
-            console.log(data[burgerId].name);
-            console.log(data[burgerId].price);
         })
         .catch(error => console.log(error))
 }
@@ -66,6 +59,7 @@ function getStoreNextDoor(url) {
         .then(res => res.json())
         .then(data => {
             const storeId = Math.floor(Math.random() * data.length);
+            document.querySelector('.store-next-door').innerText = data[storeId].name;
             console.log(data[storeId].name);
         })
         .catch(error => console.log(error))
@@ -85,7 +79,6 @@ function createCharacter(char) {
     img.alt = '';
     //Adding style
     img.classList.add('portrait');
-    // img.classList.add('image');
     //Connect tags
     div.append(h2, img);
     characters.append(div);

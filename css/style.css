@@ -30,7 +30,6 @@ body {
 }
 
 .scene {
-  /* background-image: url('../assets/restaurant.png'); */
   min-width: 80%;
   height: 80vh;
   position: relative;
@@ -59,12 +58,17 @@ body {
 button {
   position: absolute;
   border: 2px solid black;
-  border-radius: 6px;
+  box-shadow: 10px 5px  gray;
   font-size: 1.5rem;
   padding: 2px 0;
   top: -7%;
   right: 0;
   width: 40%;
+}
+
+button:hover{
+  color: white;
+  background-color: rgba(136, 40, 40, 0.829);
 }
 
 .portrait {
@@ -103,11 +107,24 @@ button {
 }
 
 .name {
-  background-color: rgb(136, 40, 40);
+  background-color: rgba(136, 40, 40, 0.829);
   padding: 10px;
   width: fit-content;
   border: 1px solid black;
   border-radius: 10px;
+}
+
+h3{
+  /* position: relative; */
+  text-align: center;
+  color: black;
+}
+
+.store-next-door{
+  background-color: rgba(136, 40, 40, 0.829);
+  color: white;
+  padding: 0 1rem;
+  border: 2px solid black;
 }
 
 
